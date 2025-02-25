@@ -6,6 +6,13 @@
     <title>Form</title>
   </head>
   <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     #submit {
       background-color: blue;
       color: white;
@@ -14,13 +21,34 @@
       border-radius: 5px;
       width: 100%;
     }
+
+    .form {
+      width: 500px;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
   </style>
   <body>
-    <form>
-      <table cellpadding="10" cellspacing="0" border="1">
+    <form class="form" action="./form.html" method="post">
+      <table cellpadding="10" cellspacing="0" border="0" align="center">
         <tr>
-          <td><label for="username">Username :</label></td>
-          <td><input type="text" id="username" name="username" /></td>
+          <td>
+            <label for="username">Username :</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Input your usenname...."
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Email :</label></td>
+          <td><input type="email" id="email" name="email" /></td>
         </tr>
         <tr>
           <td><label for="password">Password :</label></td>
@@ -56,7 +84,7 @@
           </td>
         </tr>
         <tr>
-          <td><label for="jurusan">Hobi :</label></td>
+          <td><label for="hobi">Hobi :</label></td>
           <td>
             <input
               type="checkbox"
@@ -86,6 +114,24 @@
               value="menari"
             />Menari
             <br />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="ttl">TTL</label></td>
+          <td>
+            <input type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="foto">Foto</label></td>
+          <td>
+            <input type="file" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="warna">Warna :</label></td>
+          <td>
+            <input type="color" id="warna" name="warna" />
           </td>
         </tr>
         <tr>
